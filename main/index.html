@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Encontre Paz</title>
+    <meta
+      name="description"
+      content="Uma página simples e moderna para apresentar Jesus, orações guiadas, versículos e contato. Projeto sem backend — só front-end."
+    />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="img/cruz.png" type="image/x-icon">
+  </head>
+  <body class="antialiased leading-relaxed">
+    <!-- Container -->
+    <div class="max-w-4xl mx-auto px-6 py-12">
+      
+      <header class="relative rounded-2xl overflow-hidden shadow-lg">
+        <div
+          class="bg-gradient-to-r from-sky-500 to-indigo-500 text-white p-10 md:p-16"
+        >
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="flex-1">
+              <h1
+                class="text-3xl md:text-4xl font-extrabold tracking-tight mb-3"
+              >
+                Você não chegou aqui por acaso.
+              </h1>
+              <p class="text-lg md:text-xl text-sky-100/90 mb-6">
+                Talvez hoje seja o dia que muda sua história. Dá um passo — a
+                gente te guia.
+              </p>
+
+              <div class="flex gap-3 flex-wrap">
+                <a
+                  href="#quem"
+                  class="px-6 py-3 bg-white text-sky-700 rounded-lg font-semibold shadow hover:scale-[1.02] transition transform"
+                  >Quero saber mais</a
+                >
+                <button
+                  id="btnPrayer"
+                  class="px-6 py-3 bg-transparent border border-white/60 rounded-lg text-white font-semibold hover:bg-white/10 transition"
+                >
+                  Preciso de paz
+                </button>
+              </div>
+
+              <div class="mt-6 text-sm text-white/80">
+                <span class="typewriter"
+                  ><span id="heroType" class="text-white/95 font-medium"></span
+                ></span>
+              </div>
+            </div>
+
+            <div class="w-full md:w-1/3 glass p-5 rounded-xl shadow-inner">
+              <div class="text-sm text-slate-800 font-semibold mb-3">
+                Versículo do dia
+              </div>
+              <div
+                id="versiculo"
+                class="text-slate-900 text-base md:text-lg"
+              ></div>
+              <button
+                id="newVerse"
+                class="mt-4 px-4 py-2 bg-sky-600 text-white rounded-md text-sm hover:opacity-95"
+              >
+                Outro versículo
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      
+      <section id="quem" class="mt-10 scroll-mt-20">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 class="text-2xl font-bold mb-3">Quem é Jesus?</h2>
+            <p class="text-slate-700 mb-4">
+              Jesus é apresentado na Bíblia como alguém que ama, que entende
+              nossas dores e oferece perdão e propósito. Não precisamos ter a
+              resposta pra tudo — só estar dispostos a olhar e dar um passo.
+            </p>
+            <ul class="space-y-2 text-slate-600">
+              <li>• Um amigo que entende suas lutas.</li>
+              <li>• Fonte de paz em momentos de ansiedade.</li>
+              <li>• Alguém que transforma corações.</li>
+            </ul>
+            <div class="mt-6 flex gap-3">
+              <a
+                href="#jornada"
+                class="px-5 py-3 bg-emerald-500 text-white rounded-lg font-semibold shadow hover:scale-[1.02]"
+                >Comece a jornada</a
+              >
+              <a
+                href="#estudos"
+                class="px-5 py-3 bg-transparent border border-slate-200 rounded-lg text-slate-700"
+                >Ler pequenos estudos</a
+              >
+            </div>
+          </div>
+
+          <div class="flex justify-center">
+            
+            <div
+              class="w-72 h-48 bg-white rounded-xl flex items-center justify-center shadow glass"
+            >
+              <svg
+                width="140"
+                height="90"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="opacity-90"
+              >
+                <path
+                  d="M12 2C8 6 6 9 6 12a6 6 0 1012 0c0-3-2-6-6-10z"
+                  stroke="#0F172A"
+                  stroke-width="1.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 7v5l3 1"
+                  stroke="#0F172A"
+                  stroke-width="1.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTEMUNHOS -->
+      <section id="testemunhos" class="mt-12">
+        <h3 class="text-xl font-bold mb-4">Testemunhos</h3>
+        <div class="grid md:grid-cols-3 gap-4">
+          <!-- simples cards  -->
+          <div class="p-4 rounded-xl glass shadow" id="t1">
+            “Minha vida mudou após pedir ajuda a Deus.”
+          </div>
+          <div class="p-4 rounded-xl glass shadow" id="t2">
+            “Achei paz quando parei de tentar carregar tudo sozinho.”
+          </div>
+          <div class="p-4 rounded-xl glass shadow" id="t3">
+            “Comecei devagar — hoje sinto propósito.”
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="oracao" class="mt-12">
+        <h3 class="text-xl font-bold mb-3">Oração guiada</h3>
+        <div class="p-6 rounded-xl bg-white shadow">
+          <p class="text-slate-700 mb-4">
+            Se quiser, vamos orar juntos. Leia devagar e respire entre as
+            linhas.
+          </p>
+          <div id="prayerText" class="text-slate-900 text-lg space-y-2"></div>
+          <div class="mt-4 flex gap-3">
+            <button
+              id="startPrayer"
+              class="px-5 py-2 bg-emerald-600 text-white rounded-lg"
+            >
+              Quero orar
+            </button>
+            <button
+              id="skipPrayer"
+              class="px-5 py-2 border border-slate-200 rounded-lg"
+            >
+              Ver oração completa
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARDS -->
+      <section id="estudos" class="mt-12">
+        <h3 class="text-xl font-bold mb-4">Estudos curtos</h3>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="p-4 rounded-xl bg-white shadow">
+            <h4 class="font-semibold mb-2">Como lidar com ansiedade</h4>
+            <p class="text-sm text-slate-600 mb-3">
+              Uma leitura prática e uma oração curta para quando a ansiedade
+              aperta.
+            </p>
+            <button
+              data-study="ansiedade"
+              class="openStudy px-4 py-2 border rounded-lg text-sm"
+            >
+              Ler
+            </button>
+          </div>
+          <div class="p-4 rounded-xl bg-white shadow">
+            <h4 class="font-semibold mb-2">Perdão que liberta</h4>
+            <p class="text-sm text-slate-600 mb-3">
+              Entenda o que é perdoar e como dar o primeiro passo.
+            </p>
+            <button
+              data-study="perdao"
+              class="openStudy px-4 py-2 border rounded-lg text-sm"
+            >
+              Ler
+            </button>
+          </div>
+          <div class="p-4 rounded-xl bg-white shadow">
+            <h4 class="font-semibold mb-2">Encontrando propósito</h4>
+            <p class="text-sm text-slate-600 mb-3">
+              Pequenos passos para descobrir propósito no dia-a-dia.
+            </p>
+            <button
+              data-study="proposito"
+              class="openStudy px-4 py-2 border rounded-lg text-sm"
+            >
+              Ler
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- JORNADA -->
+      <section id="jornada" class="mt-12">
+        <h3 class="text-xl font-bold mb-4">Jornada — 3 passos</h3>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="p-6 rounded-xl bg-white shadow text-center">
+            <div class="text-2xl font-bold text-sky-600 mb-2">1</div>
+            <div class="font-semibold mb-2">Pare e reflita</div>
+            <div class="text-sm text-slate-600">
+              Respire, reconheça o que sente e entregue isso a Deus.
+            </div>
+          </div>
+          <div class="p-6 rounded-xl bg-white shadow text-center">
+            <div class="text-2xl font-bold text-emerald-600 mb-2">2</div>
+            <div class="font-semibold mb-2">Leia uma palavra</div>
+            <div class="text-sm text-slate-600">
+              Um versículo por dia pode iluminar o caminho.
+            </div>
+          </div>
+          <div class="p-6 rounded-xl bg-white shadow text-center">
+            <div class="text-2xl font-bold text-sky-700 mb-2">3</div>
+            <div class="font-semibold mb-2">Converse com alguém</div>
+            <div class="text-sm text-slate-600">
+              Clique no botão abaixo — você não está sozinho.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHATSAPP -->
+      <section id="contato" class="mt-12">
+        <div
+          class="p-6 rounded-xl bg-gradient-to-r from-white to-sky-50 shadow flex flex-col md:flex-row items-center justify-between gap-4"
+        >
+          <div>
+            <h4 class="text-lg font-bold">Precisa conversar agora?</h4>
+            <p class="text-slate-700">
+              Se quiser um papo, clique no botão. Alguém vai responder
+              com carinho.
+            </p>
+          </div>
+          <div class="flex gap-3">
+            
+            <a
+              id="whatsappLink"
+              href="https://wa.me/5581979078912?text=Oi,+vi+o+site+e+gostaria+de+conversar."
+              target="_blank"
+              class="px-5 py-3 bg-green-600 text-white rounded-lg font-semibold"
+              >Falar pelo WhatsApp</a
+            >
+            <a
+              href="https://www.youtube.com/watch?v=WnVSf1EPFFs&list=RDWnVSf1EPFFs&start_radio=1"
+              target="_blank"
+              class="px-5 py-3 border rounded-lg"
+              >Ouvir música</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="mt-12 text-center text-sm text-slate-500">
+        <p>
+          Feito com ❤️ para alcançar pessoas.
+          <span class="hidden sm:inline">—</span>
+          <a href="#top" class="text-sky-600">Voltar ao topo</a>
+        </p>
+      </footer>
+    </div>
+
+    <!-- ESTUDOS -->
+    <div
+      id="studyModal"
+      class="fixed inset-0 hidden items-center justify-center bg-black/50 p-4 z-50"
+    >
+      <div class="bg-white rounded-xl max-w-2xl w-full p-6 shadow-lg">
+        <div class="flex justify-between items-start">
+          <h4 id="studyTitle" class="text-lg font-bold"></h4>
+          <button id="closeStudy" class="text-slate-500">Fechar</button>
+        </div>
+        <div id="studyBody" class="mt-4 text-slate-700"></div>
+      </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
